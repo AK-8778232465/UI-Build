@@ -4,21 +4,32 @@
   <title>Glide</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/bootstrap-icons@1.6.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+      integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
   <link rel="stylesheet" href="{{asset('asset/css/DashboardStyle.css')}}">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" integrity="sha512-yHBBRwyzU16Lx0+ncQMa8qWgFW/9CfHe1D72xO5c2Nck0+EIdLCKiLrnBvcNUmM/m0S6g91Lttv9FGWQzZ+6vQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha512-pbtq2mQXyggVE9S9vEus5z5eJF5cOFXjQoVRbYG5wmzPW2XH/g+He8oKSDXa9z9+xm1wy34kGnYEPqftTWzKzg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" integrity="sha512-jPRQ+7lYJN/Hc6LmRcGbySTJuwp0o4O8lX+gYquyS9Ff+J/iNqw7AsodY9V/UhMbkKNzBqVstZIb7BIDu95cA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="{{asset('asset/css/sidebar.css')}}">
+  
+
+
+
 </head>
 
  <body> 
-    
+<div class="containerOuterLayout"> 
   <section class="glide-nav">
-    <nav class="navbar navbar-expand-lg navbar-light">
+    <nav class="navbar navbar-expand-lg navbar-light border-bottom">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           <img src="{{asset('asset/img/icon.png')}}" width="121px" height="48px" alt="Glide_icon">
@@ -33,7 +44,7 @@
           data-bs-target="#navbarOffcanvas" aria-controls="navbarOffcanvas">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="navbarOffcanvas"
+        <div class="offcanvas offcanvas-end w-50" tabindex="-1" id="navbarOffcanvas"
           aria-labelledby="navbarOffcanvasLabel">
           <div class="offcanvas-header d-flex align-items-center d-lg-none d-xl-none border-bottom">
             <h5 class="offcanvas-title" id="navbarOffcanvasLabel">
@@ -48,7 +59,7 @@
                       Shanmugam<span style="font: normal normal normal 15px/13px Poppins;"><br>Developer</span>
                     </a>
                     <a href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      <span class="fa fa-angle-down"></span>
+                      
                     </a>
                     <div>
                       <ul class="dropdown-menu">
@@ -69,10 +80,8 @@
                             style="color: #0033A1;font: normal normal bold 14px/21px Poppins;background: #E3ECF6;border-right: 3px solid #001c58;">
                             <a href="#" class="link-hover"
                                 style="color: #0033A1;font: normal normal bold 14px/21px Poppins;background: #E3ECF6;">
-
                                 <img src="{{asset('asset/img/list.svg')}}" alt="logo" class="icon"
                                     style="color: #0033A1;font: normal normal bold 14px/21px Poppins;border-right: 2px solid #001c58; border: 1px solid #0033A1; background: #0033A1; border-radius: 5px;">
-
                                 <span class="text nav-text-mob ms-2">Pipe Line</span>
                             </a>
                         </li>
@@ -102,16 +111,13 @@
                         <li class="nav-links-mob mb-3 d-flex justify-content-center align-items-center">
                             <a href="#" class="link-hover">
                                 <img src="{{asset('asset/img/Group 5718.svg')}}" alt="logo" class="icon">
-
                                 <span class="text nav-text-mob ms-2">Settings</span>
                             </a>
                         </li>
                         <li class="nav-links-mob mb-3 d-flex justify-content-center align-items-center">
                             <a href="#" class="link-hover" >
                                 <img src="{{asset('asset/img/Group 5719.svg')}}" alt="logo" class="icon">
-
                                 <span class="text nav-text-mob ms-2">Logout</span>
-
                             </a>
                         </li>
                     </ul>
@@ -153,7 +159,7 @@
   <section class="body-content">
     <!-- For mobile -->
         <div class="mobile-body d-md-none d-lg-none d-xl-none mb-4">
-                          <!-- Search -->
+          <!-- Search -->
           <div class="d-flex justify-content-center">
             <div class="nav-search  ">
               <form class="d-flex mt-4 me-auto  align-items-center searchbtn" role="search">
@@ -167,10 +173,76 @@
     <!-- For desktop view -->
     <section class="side-bar container-fluid d-none d-lg-block d-xl-block">
     <div class="container-fluid">
-      
+
+     {{-- Sidebar Desktop --}}
+    <section class="sidebar">
+            <header>
+                <i id="toggle-button1" style="left: 203px;" class='bx bx-chevron-right toggle'></i>
+            </header>
+            <div class="menu-bar">
+                <div class="container-fluid menu">
+                    <ul class="menu-links">
+                        <li class="nav-links link-hover"
+                            style="width:212px;color: #0033A1;font: normal normal bold 14px/21px Poppins;background: #E3ECF6;border-left: 3px solid #001c58;">
+                            <a href="#" class="link-hover" style="width:212px"
+                                style="color: #0033A1;font: normal normal bold 14px/21px Poppins;background: #E3ECF6;">
+                                <img src="img/list.svg" alt="logo" class="icon"
+                                    style="color: #0033A1;font: normal normal bold 14px/21px Poppins;border-left: 2px solid #001c58; border: 1px solid #0033A1; background: #0033A1; border-radius: 5px;">
+
+                                <span class="text nav-text">Pipe Line</span>
+                            </a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="#" class="link-hover" style="width:212px">
+                                <img src="img/quick pricing.svg" alt="logo" class="icon">
+                                <span class="text nav-text" >Price Scenario</span>
+                            </a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="#" class="link-hover" style="width:212px">
+                                <img src="img/g3306.svg" alt="logo" class="icon">
+                                <span class="text nav-text">Quick Pricing</span>
+                            </a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="#" class="link-hover" style="width:212px">
+                                <img src="img/files-and-folders.svg" alt="logo" class="icon">
+                                <span class="text nav-text">Submit Loans</span>
+                            </a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="#">
+                            <span class="text nav-text" style="color:#343434;font-size: 14px; font-weight:bolder; position:relative; left: 0px;">ACCOUNT</span>
+                            </a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="#" class="link-hover" style="width:212px">
+                                <img src="img/Group 5718.svg" alt="logo" class="icon">
+                                <span class="text nav-text">Settings</span>
+                            </a>
+                        </li>
+                        <li class="nav-links">
+                            <a href="#" class="link-hover" style="width:212px">
+                                <img src="img/Group 5719.svg" alt="logo" class="icon">
+                                <span class="text nav-text">Logout</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div>
     </section>
   </section>
+</div>
   </body>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/js/bootstrap.min.js" integrity="sha512-pbtq2mQXyggVE9S9vEus5z5eJF5cOFXjQoVRbYG5wmzPW2XH/g+He8oKSDXa9z9+xm1wy34kGnYEPqftTWzKzg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      integrity="sha512-fD9DI5bZwQxOi7MhYWnnNPlvXdp/2Pj3XSTRrFs5FQa4mizyGLnJcN6tuvUS6LbmgN1ut+XGSABKvjN0H6Aoow=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://kit.fontawesome.com/9a470ccc4c.js" crossorigin="anonymous"></script>
+
+  <script src="asset/js/script.js"></script>
 </html>
