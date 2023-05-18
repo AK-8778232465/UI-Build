@@ -1,16 +1,37 @@
-(function ($) {
-    "use strict";
-    var fullHeight = function () {
-        $(".js-fullheight").css("height", $(window).height());
-        $(window).resize(function () {
-            $(".js-fullheight").css("height", $(window).height());
-        });
-    };
-    fullHeight();
-    $("#sidebarCollapse").on("click", function () {
-        $("#sidebar").toggleClass("active");
+// (function ($) {
+//     "use strict";
+//     var fullHeight = function () {
+//         $(".js-fullheight").css("height", $(window).height());
+//         $(window).resize(function () {
+//             $(".js-fullheight").css("height", $(window).height());
+//         });
+//     };
+//     fullHeight();
+//     $("#sidebarCollapse").on("click", function () {
+//         $("#sidebar").toggleClass("active");
+//     });
+// })(jQuery);
+
+
+$(document).ready(function () {
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
     });
-})(jQuery);
+
+    $('#sidebarCollapse1').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    var arrows = document.querySelectorAll(".btn1");
+
+    arrows.forEach(function (arrow) {
+        arrow.addEventListener("click", function () {
+            this.classList.toggle("rotated");
+        });
+    });
+});
 
 // (function ($) {
 //     "use strict";
