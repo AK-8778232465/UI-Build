@@ -46,7 +46,7 @@ top: 0;
                     <img class="w-50" src="{{asset('img/header.png')}}"><p><p> </p> </p>
                     <p style="text-align: left; font: normal normal 600 16px/36px Poppins; letter-spacing: 0px; color: #000000;">We Need To Verify Your Identity</p>
                     <p><img class="call-symbol"  src="{{asset('img/phone_symbol.png')}}">
-                    <span><input class="v-num w-auto border-bottom border-0 px-5" type="number" placeholder="+1 ********20"></p></span>
+                    <span><input class="v-num w-auto border-bottom border-0 px-5" type="text" placeholder="+1 ********20"></p></span>
                     <span class="w-75" style="font:normal normal 600 13px/18px Poppins;color:#555555;">If your number is incorrect, please reach out to</span>
                     <span class="w-75" style="font:normal normal 600 13px/18px Poppins;color:#0033A1">itsupport@acrabrokerlinks.com</span> <br> <br>
                     
