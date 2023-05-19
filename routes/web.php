@@ -14,7 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+    return view('firstpage');
+});
+
+Route::get('/second', function () {
+    return view('second');
+});
+Route::get('/third', function () {
+    return view('third');
+});
+Route::get('/fourth', function () {
     return view('welcome');
 });
+
 
 
