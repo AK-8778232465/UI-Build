@@ -86,3 +86,22 @@
    font-size: 11px;
     border-width: thin;
   }
+ .btn2{
+  background: #EBEBEB 0% 0% no-repeat padding-box;
+  border: 0.30000001192092896px solid #C9C9C9;
+ }
+
+ .active1 {
+  background-color: #0033A1 !important;
+  color: #EBEBEB;
+}
+.btn-primary:focus,
+.btn-primary:active{
+    box-shadow:none !important;
+    outline:0px !important;
+}
+.btn-info:focus,
+.btn-info:active{
+    box-shadow:none !important;
+    outline:0px !important;
+}

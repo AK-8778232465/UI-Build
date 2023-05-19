@@ -18,6 +18,7 @@
         integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <link rel="stylesheet" href="{{asset('asset/css/DashboardStyle.css')}}">
     <link rel="stylesheet" href="{{asset('asset/css/sidebar.css')}}">
@@ -189,28 +190,28 @@
                 <nav id="sidebar" class="d-none d-lg-flex">
 
                     <ul class="list-unstyled components w-100">
-                        <li>
+                        <li class="btn3 active3">
                             <a href="#">
                                 <img src="asset/img/list.svg" alt="logo" class="icon"
                                     style="border: 1px solid #0033A1; background: #0033A1; border-radius: 5px;">
                                 <span class="text">Pipe Line</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="btn3 active3">
                             <a href="#">
                                 <img src="asset/img/quick pricing.svg" alt="logo" class="icon"
                                     style="width: 15.748px; height: 19.008px; position:relative; left:3px;">
                                 <span class="text">Price Scenario</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="btn3 active3">
                             <a href="#">
                                 <img src="asset/img/g3306.svg" alt="logo" class="icon">
                                 <span class="text">Quick Pricing</span>
                             </a>
 
                         </li>
-                        <li>
+                        <li class="btn3 active3">
                             <a href="#">
                                 <img src="asset/img/files-and-folders.svg" alt="logo" class="icon">
                                 <span class="text">Submit Loans</span>
@@ -219,13 +220,13 @@
                         <li>
                             <span class="account" style="font-weight:bolder">ACCOUNT</span>
                         </li>
-                        <li>
+                        <li class="btn3 active3">
                             <a href="#">
                                 <img src="asset/img/Group 5718.svg" alt="logo" class="icon">
                                 <span class="text">Settings</span>
                             </a>
                         </li>
-                        <li>
+                        <li class="btn3 active3">
                             <a href="#">
                                 <img src="asset/img/Group 5719.svg" alt="logo" class="icon">
                                 <span class="text">Logout</span>
@@ -234,103 +235,95 @@
                     </ul>
                 </nav>
 
-                <button type="button" id="sidebarCollapse" class="btn btn-info btn1 ">
+                <button type="button" id="sidebarCollapse" class="btn btn-info btn1">
                     <i class="fa-solid fa-chevron-left icon" style="color: #fcfdfd;"></i>
                 </button>
                 <!-- Page Content  -->
                 <div id="content" class="ms-2 mt-lg-5 mt-md-3">
                     {{-- Pipeline head --}}
-                    {{-- <div class="container-fluid">
+                    <div class="container-fluid">
                         <div class="row">
-                            <div class="col-lg-3  col-md-3 col-sm-1">
+                            <div class="col-lg-3 col-md-3 col-sm-1">
                                 <h3 class="fw-bold d-sm-flex text-center" style="color: #323E48; font-size: 16px;">Pipe
                                     Line</h3>
                             </div>
                             <div class="col d-none d-md-flex justify-content-md-start d-md-block d-xl-block">
                                 <div class="btn-group">
-                                    <button class="btn1 active px-2">Scenarios</button>
-                                    <button class="btn1 px-2">Active</button>
-                                    <button class="btn1 px-2">Funded</button>
-                                    <button class="btn1 px-2">Cancelled/Declined</button>
+                                    <button class="btn2 active1 px-2" id="btn-scenarios">Scenarios</button>
+                                    <button class="btn2 px-2" id="btn-active">Active</button>
+                                    <button class="btn2 px-2" id="btn-funded">Funded</button>
+                                    <button class="btn2 px-2" id="btn-cancelled">Cancelled/Declined</button>
                                 </div>
                             </div>
                             <div class="col d-flex justify-content-center d-lg-none d-sm-block d-md-none mt-2">
                                 <div class="btn-group">
-                                    <button class="btn1 active px-1">Scenarios</button>
-                                    <button class="btn1 px-1">Active</button>
-                                    <button class="btn1 px-1">Funded</button>
-                                    <button class="btn1 px-1">Cancelled/Declined</button>
+                                    <button class="btn2 active1 px-1" id="btn-scenarios-sm">Scenarios</button>
+                                    <button class="btn2 px-1" id="btn-active-sm">Active</button>
+                                    <button class="btn2 px-1" id="btn-funded-sm">Funded</button>
+                                    <button class="btn2 px-1"
+                                        id="btn-cancelled-sm">Cancelled/Declined</button>
                                 </div>
                             </div>
                         </div>
-                    </div> --}}
-                    <div class="container-fluid">
-                        <div class="row">
-                          <div class="col-lg-3 col-md-3 col-sm-1">
-                            <h3 class="fw-bold d-sm-flex text-center" style="color: #323E48; font-size: 16px;">Pipe Line</h3>
-                          </div>
-                          <div class="col d-none d-md-flex justify-content-md-start d-md-block d-xl-block">
-                            <div class="btn-group">
-                              <button class="btn1 active px-2 text-dark" id="btn-scenarios">Scenarios</button>
-                              <button class="btn1 px-2 text-dark" id="btn-active">Active</button>
-                              <button class="btn1 px-2 text-dark" id="btn-funded">Funded</button>
-                              <button class="btn1 px-2 text-dark" id="btn-cancelled">Cancelled/Declined</button>
-                            </div>
-                          </div>
-                          <div class="col d-flex justify-content-center d-lg-none d-sm-block d-md-none mt-2">
-                            <div class="btn-group">
-                              <button class="btn1 active px-1 text-dark" id="btn-scenarios-sm">Scenarios</button>
-                              <button class="btn1 px-1 text-dark" id="btn-active-sm">Active</button>
-                              <button class="btn1 px-1 text-dark" id="btn-funded-sm">Funded</button>
-                              <button class="btn1 px-1 text-dark" id="btn-cancelled-sm">Cancelled/Declined</button>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
+                    </div>
                     {{-- Search By --}}
-                    {{-- <div style="border-radius:5px" >
-                        <div class="dashboard-search shadow p-1" id="dashboard-table1" style="border-radius:5px">
+                    <div style="border-radius: 5px">
+                        <div class="dashboard-search shadow p-1 mt-3 mt-sm-5 mt-md-0 mt-lg-3" id="dashboard-table1"
+                            style="border-radius: 5px">
                             <span class="dashboard-search-head ms-1" style="font-size: 14px;">Search</span>
                             <div class="row ms-1 me-1 align-items-center"
-                                style="border-radius:5px;height: 69px; background: #EFF5FC">
-                                <div class="col-lg-10 row-cols-sm-6">
-                                    <label style="font-size: 14px">Search by</label>
-                                    <input type="date" id="date-filter" class="ms-3" name="txtDate" placeholder="">
-                                    <select  class="ms-5"  id="borrower-name-filter" aria-label="Default select example">
-                                        <option selected style="font-size: 14px">Borrower Name</option>
-                                    </select>
+                                style="border-radius: 5px; min-height: 69px; background: #EFF5FC">
+                                <div class="col-lg-10 col-md-9 col-sm-12">
+                                    <div class="d-flex flex-md-row flex-column mt-4 mt-md-0 mt-sm-4 mt-lg-0">
+                                        <label class="px-2 d-none d-lg-flex d-md-flex d-sm-none"
+                                            style="font-size: 14px">Search by</label>
+                                        <input type="date" id="date-filter " class="ms-0 mb-2 mb-md-0 custom-date-input"
+                                            name="txtDate" placeholder="">
+                                        <select class="ms-md-5 custom-select" id="borrower-name-filter"
+                                            aria-label="Default select example">
+                                            <option selected style="font-size: 14px">Borrower Name</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="col-lg-2 row-cols-sm-6">
-                                    <button class="btnrst" style="position:relative;left:20px;font: normal normal 600 10px/16px Poppins;width: 69px;  height: 30px;border-radius:5px;">Reset</button>
-                                    <button class="btngo" style="position:relative;left:20px;font: normal normal 600 10px/16px Poppins;width: 37px;  height: 30px;border-radius:5px;">Go</button>
+                                <div class="col-lg-2 col-md-3 col-sm-12 d-flex justify-content-end mt-3 mt-md-0">
+                                    <button class="btn btn-primary btn-sm me-2 btnrst"
+                                        style="border-radius: 2px; color: #FFFFFF; background-color: #9C9C9C;">Reset</button>
+                                    <button class="btn btn-primary btn-sm btngo"
+                                        style="border-radius: 2px; background-color: #0033A1; color: #FFFFFF;">Go</button>
                                 </div>
                             </div>
                         </div>
-                    </div> --}}
-                    <div style="border-radius: 5px">
-                        <div class="dashboard-search shadow p-1 mt-3 mt-sm-5 mt-md-0 mt-lg-3" id="dashboard-table1" style="border-radius: 5px">
-                          <span class="dashboard-search-head ms-1" style="font-size: 14px;">Search</span>
-                          <div class="row ms-1 me-1 align-items-center" style="border-radius: 5px; min-height: 69px; background: #EFF5FC">
-                            <div class="col-lg-10 col-md-9 col-sm-12">
-                              <div class="d-flex flex-md-row flex-column mt-4 mt-md-0 mt-sm-4 mt-lg-0">
-                                <label class="px-2 d-none d-lg-flex d-md-flex d-sm-none" style="font-size: 14px">Search by</label>
-                                <input type="date" id="date-filter " class="ms-0 mb-2 mb-md-0 custom-date-input" name="txtDate" placeholder="">
-                                <select class="ms-md-5 custom-select" id="borrower-name-filter" aria-label="Default select example">
-                                  <option selected style="font-size: 14px">Borrower Name</option>
-                                </select>
-                              </div>
-                            </div>
-                            <div class="col-lg-2 col-md-3 col-sm-12 d-flex justify-content-end mt-3 mt-md-0">
-                                <button class="btn btn-primary btn-sm me-2 btnrst" style="border-radius: 2px; color: #FFFFFF; background-color: #9C9C9C;">Reset</button>
-                                <button class="btn btn-primary btn-sm btngo" style="border-radius: 2px; background-color: #0033A1; color: #FFFFFF;">Go</button>
-                              </div>
-                          </div>
-                        </div>
-                      </div>
-                </div>
+                    </div>
+                    {{-- Tables --}}
+                    <div class="dashboard-table container_table shadow mt-4 mt-sm-2 mt-md-2 mt-lg-4"
+                    id="dashboard-table"
+                    style="border-radius:5px;color: #323E48;text-align: left;font: normal normal 600 12px/18px Poppins;">
+                
+                <div class="pagination-back"></div>
+                <table id="glide-table" class="table row-border test-table w-100 datatable"
+                    style="border-radius:5px;height: 40px;">
+                    <thead class="my-table-header1" id="dashboard-head1"
+                        style="vertical-align:middle;background: #E3ECF6 0% 0% no-repeat padding-box;">
+                        <tr>
+                            <th>Scenario Name</th>
+                            <th>Borrower Name</th>
+                            <th>Date</th>
+                            <th>Loan Officer</th>
+                            <th>Loan Purpose</th>
+                            <th>Broker Name</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody style="border-radius:5px;background: #FCFCFC  0% 0% no-repeat padding-box; width:100vh"
+                        class="px-3">
+                        {{-- Table data retrived from json file  --}}
+                    </tbody>
+                </table>
             </div>
-        </section>
+                    
+            </div>
+    </div>
+    </section>
     </div>
 </body>
 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
