@@ -1,17 +1,14 @@
-// (function ($) {
-//     "use strict";
-//     var fullHeight = function () {
-//         $(".js-fullheight").css("height", $(window).height());
-//         $(window).resize(function () {
-//             $(".js-fullheight").css("height", $(window).height());
-//         });
-//     };
-//     fullHeight();
-//     $("#sidebarCollapse").on("click", function () {
-//         $("#sidebar").toggleClass("active");
-//     });
-// })(jQuery);
+$(document).ready(function () {
+    $('#example').DataTable();
+});
 
+function changeButtonStyle(button) {
+    var buttons = document.getElementsByClassName("btn1");
+    for (var i = 0; i < buttons.length; i++) {
+      buttons[i].classList.remove("active");
+    }
+    button.classList.add("active");
+  }
 
 $(document).ready(function () {
     $('#sidebarCollapse').on('click', function () {

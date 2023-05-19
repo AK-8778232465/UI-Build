@@ -240,7 +240,7 @@
                 <!-- Page Content  -->
                 <div id="content" class="ms-2 mt-lg-5 mt-md-3">
                     {{-- Pipeline head --}}
-                    <div class="container-fluid">
+                    {{-- <div class="container-fluid">
                         <div class="row">
                             <div class="col-lg-3  col-md-3 col-sm-1">
                                 <h3 class="fw-bold d-sm-flex text-center" style="color: #323E48; font-size: 16px;">Pipe
@@ -263,28 +263,71 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
+                    <div class="container-fluid">
+                        <div class="row">
+                          <div class="col-lg-3 col-md-3 col-sm-1">
+                            <h3 class="fw-bold d-sm-flex text-center" style="color: #323E48; font-size: 16px;">Pipe Line</h3>
+                          </div>
+                          <div class="col d-none d-md-flex justify-content-md-start d-md-block d-xl-block">
+                            <div class="btn-group">
+                              <button class="btn1 active px-2 text-dark" id="btn-scenarios">Scenarios</button>
+                              <button class="btn1 px-2 text-dark" id="btn-active">Active</button>
+                              <button class="btn1 px-2 text-dark" id="btn-funded">Funded</button>
+                              <button class="btn1 px-2 text-dark" id="btn-cancelled">Cancelled/Declined</button>
+                            </div>
+                          </div>
+                          <div class="col d-flex justify-content-center d-lg-none d-sm-block d-md-none mt-2">
+                            <div class="btn-group">
+                              <button class="btn1 active px-1 text-dark" id="btn-scenarios-sm">Scenarios</button>
+                              <button class="btn1 px-1 text-dark" id="btn-active-sm">Active</button>
+                              <button class="btn1 px-1 text-dark" id="btn-funded-sm">Funded</button>
+                              <button class="btn1 px-1 text-dark" id="btn-cancelled-sm">Cancelled/Declined</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
                     {{-- Search By --}}
-                    <div style="border-radius:5px" >
+                    {{-- <div style="border-radius:5px" >
                         <div class="dashboard-search shadow p-1" id="dashboard-table1" style="border-radius:5px">
                             <span class="dashboard-search-head ms-1" style="font-size: 14px;">Search</span>
                             <div class="row ms-1 me-1 align-items-center"
                                 style="border-radius:5px;height: 69px; background: #EFF5FC">
-                                <div class="col-10">
+                                <div class="col-lg-10 row-cols-sm-6">
                                     <label style="font-size: 14px">Search by</label>
                                     <input type="date" id="date-filter" class="ms-3" name="txtDate" placeholder="">
                                     <select  class="ms-5"  id="borrower-name-filter" aria-label="Default select example">
                                         <option selected style="font-size: 14px">Borrower Name</option>
                                     </select>
                                 </div>
-                                <div class="col-2">
+                                <div class="col-lg-2 row-cols-sm-6">
                                     <button class="btnrst" style="position:relative;left:20px;font: normal normal 600 10px/16px Poppins;width: 69px;  height: 30px;border-radius:5px;">Reset</button>
                                     <button class="btngo" style="position:relative;left:20px;font: normal normal 600 10px/16px Poppins;width: 37px;  height: 30px;border-radius:5px;">Go</button>
                                 </div>
                             </div>
                         </div>
-                    </div>
-
+                    </div> --}}
+                    <div style="border-radius: 5px">
+                        <div class="dashboard-search shadow p-1 mt-3 mt-sm-5 mt-md-0 mt-lg-3" id="dashboard-table1" style="border-radius: 5px">
+                          <span class="dashboard-search-head ms-1" style="font-size: 14px;">Search</span>
+                          <div class="row ms-1 me-1 align-items-center" style="border-radius: 5px; min-height: 69px; background: #EFF5FC">
+                            <div class="col-lg-10 col-md-9 col-sm-12">
+                              <div class="d-flex flex-md-row flex-column mt-4 mt-md-0 mt-sm-4 mt-lg-0">
+                                <label class="px-2 d-none d-lg-flex d-md-flex d-sm-none" style="font-size: 14px">Search by</label>
+                                <input type="date" id="date-filter " class="ms-0 mb-2 mb-md-0 custom-date-input" name="txtDate" placeholder="">
+                                <select class="ms-md-5 custom-select" id="borrower-name-filter" aria-label="Default select example">
+                                  <option selected style="font-size: 14px">Borrower Name</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="col-lg-2 col-md-3 col-sm-12 d-flex justify-content-end mt-3 mt-md-0">
+                                <button class="btn btn-primary btn-sm me-2 btnrst" style="border-radius: 2px; color: #FFFFFF; background-color: #9C9C9C;">Reset</button>
+                                <button class="btn btn-primary btn-sm btngo" style="border-radius: 2px; background-color: #0033A1; color: #FFFFFF;">Go</button>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
                 </div>
             </div>
         </section>

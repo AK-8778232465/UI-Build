@@ -245,3 +245,7 @@ span.text {
         margin-top: 5%;
     } */
 
+    .active-button {
+        color: white !important;
+        background-color: #EBEBEB !important;
+      }
