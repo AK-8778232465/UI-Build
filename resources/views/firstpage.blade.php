@@ -27,6 +27,10 @@
 
 
 <style>
+    *{
+        font:normal normal 600 14px/18px Poppins;
+    }
+   
     .cover_image{
           
                     height:100vh;

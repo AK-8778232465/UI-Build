@@ -139,11 +139,11 @@ $(document).ready(function () {
             var currentPage = pageInfo.page + 1;
             var totalPages = pageInfo.pages;
             var paginationHtml = '';
-            paginationHtml += '<a class="paginate_button first"  href="#" data-page="first"><i style="opacity: 1;" class="fa-solid fa-angles-left" style="font-size:12px"></i></a><span>&nbsp;&nbsp;&nbsp;</span>';
-            paginationHtml += '<a class="paginate_button previous"  href="#" data-page="prev"><i style="opacity: 1;" class="fa-solid fa-angle-left" style="font-size:12px"></i></a><span>&nbsp;&nbsp;&nbsp;</span>';
-            paginationHtml += '<span class="paginate_button current"> ' + currentPage + '<span style="height:10px;font-size:8px">&nbsp; / &nbsp;</span>' + totalPages + ' </span><span>&nbsp;&nbsp;&nbsp;</span>';
-            paginationHtml += '<a class="paginate_button next" href="#" data-page="next"><i style="opacity: 1;" class="fa-solid fa-angle-right" style="font-size:12px"></i></a><span>&nbsp;&nbsp;&nbsp;</span>';
-            paginationHtml += '<a class="paginate_button last"  href="#" data-page="last"><i style="opacity: 1;" class="fa-solid fa-angles-right" style="font-size:12px"></a>';
+            paginationHtml += '<a class="paginate_button first"  href="#" data-page="first"><i style="opacity: 1;" class="fa-solid fa-angles-left text-dark" style="font-size:12px;color:#707070"></i></a><span>&nbsp;&nbsp;&nbsp;</span>';
+            paginationHtml += '<a class="paginate_button previous"  href="#" data-page="prev"><i style="opacity: 1;" class="fa-solid fa-angle-left text-dark" style="font-size:12px;color:#707070"></i></a><span>&nbsp;&nbsp;&nbsp;</span>';
+            paginationHtml += '<span class="paginate_button current"> ' + currentPage + '<span style="height:10px;font-size:8px;color:#707070">&nbsp; / &nbsp;</span>' + totalPages + ' </span><span>&nbsp;&nbsp;&nbsp;</span>';
+            paginationHtml += '<a class="paginate_button next" href="#" data-page="next"><i style="opacity: 1;" class="fa-solid fa-angle-right text-dark" style="color:#707070;font-size:12px"></i></a><span>&nbsp;&nbsp;&nbsp;</span>';
+            paginationHtml += '<a class="paginate_button last"  href="#" data-page="last"><i style="opacity: 1;" class="fa-solid fa-angles-right text-dark" style="color:#707070;font-size:12px"></a>';
             pagination.html(paginationHtml);
 
             // attach click event listener to navigation links
